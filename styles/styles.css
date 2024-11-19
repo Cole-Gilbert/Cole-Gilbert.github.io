@@ -81,7 +81,16 @@ img {
   gap: 1rem;
   padding: 1rem 0;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  /* Hides scrollbar in Firefox */
 }
+
+.carousel::-webkit-scrollbar {
+  display: none;
+  /* Hides scrollbar in Chrome, Edge, and Safari */
+}
+
 
 .carousel-item {
   flex: 0 0 auto;
@@ -93,7 +102,7 @@ img {
 }
 
 .carousel-item img {
-  width: 7.5%;
+  width: 300px;
   height: auto;
   border-radius: 15px;
 }
