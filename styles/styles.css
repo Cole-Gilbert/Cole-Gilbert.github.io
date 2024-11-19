@@ -7,7 +7,6 @@ body {
 }
 
 .navbar {
-  position: sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
@@ -42,4 +41,97 @@ a:visited {
 img {
   display: block;
   margin-top: 20px;
+}
+
+/* About Section Styles */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.profile-photo img {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 60%;
+  font-size: 1.2rem;
+}
+
+.highlight {
+  color: #007bff;
+  /* Electric Blue */
+  font-weight: bold;
+}
+
+/* Carousel Styles */
+.carousel-container {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  gap: 1rem;
+  padding: 1rem 0;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 300px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.carousel-item p {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Mission Statement Styles */
+.mission-statement {
+  margin: 2rem 0;
+  padding: 1rem;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mission-statement h2 {
+  margin-bottom: 1rem;
+}
+
+.mission-statement p {
+  font-size: 1.2rem;
+}
+
+/* Projects Section Styles */
+.projects {
+  margin: 3rem 0;
+  text-align: center;
+}
+
+.projects h2 {
+  margin-bottom: 1rem;
+}
+
+.projects p {
+  font-size: 1rem;
+  color: grey;
 }
