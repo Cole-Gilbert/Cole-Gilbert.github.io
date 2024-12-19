@@ -25,13 +25,36 @@ body {
   transition: color 0.3s ease;
 }
 
+.navbar {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left .nav-link {
+  margin-right: 1rem;
+}
+
+.nav-right .nav-link {
+  margin-left: 1rem;
+}
+
+
 .nav-link:hover {
   color: #007bff;
   /* Electric Blue */
-}
-
-.nav-projects {
-  margin-left: auto;
 }
 
 a:visited {
@@ -43,12 +66,15 @@ img {
   margin-top: 20px;
 }
 
-/* About Section Styles */
+/* About Section */
+.about-section {
+  padding: 2rem 0;
+}
+
 .about-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
+  gap: 2rem;
 }
 
 .profile-photo img {
@@ -61,6 +87,25 @@ img {
 .about-text {
   max-width: 60%;
   font-size: 1.2rem;
+}
+
+/* Work Experience Box */
+.work-experience {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.work-experience h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.work-experience p {
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .highlight {
@@ -108,7 +153,7 @@ img {
 }
 
 .carousel-item p {
-  margin-top: 0.5rem;
+  margin-top: 0.0rem;
   font-size: 0.9rem;
 }
 
