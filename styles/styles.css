@@ -6,16 +6,17 @@ body {
   background-color: white;
 }
 
-.navbar {
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
-  padding: 1rem 2rem;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+/* Section Titles */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  color: black;
 }
+
+/* NavBar Section */
 
 .nav-link {
   text-decoration: none;
@@ -25,9 +26,10 @@ body {
   transition: color 0.3s ease;
 }
 
-.navbar {
+#navbar {
   position: sticky;
   top: 0;
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -72,38 +74,74 @@ img {
 }
 
 .about-container {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-areas:
+    "top-left top-right"
+    "bottom-left bottom-right";
+  grid-template-columns: 1fr 1fr;
+  /* Each column is of equal width */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   gap: 2rem;
+  /* Adds spacing between quadrants */
 }
 
+.profile-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.top-left {
+  grid-area: top-left;
+}
+
+.bottom-left {
+  grid-area: bottom-left;
+}
+
+.bottom-right {
+  grid-area: bottom-right;
+}
+
+/* Profile Photo and Blurb */
 .profile-photo img {
   width: 200px;
   height: 200px;
-  border-radius: 15px;
+  border-radius: 10px;
   object-fit: cover;
+  margin-right: 1.5rem;
 }
 
 .about-text {
-  max-width: 60%;
   font-size: 1.2rem;
+  line-height: 1.5;
+  color: black;
+  word-wrap: break-word;
+  /* Prevents text from overflowing the box */
 }
 
-/* Work Experience Box */
-.work-experience {
-  margin-top: 2rem;
-  padding: 1.5rem;
+/* Work and Education Sections */
+.work-experience,
+.education {
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: 200px;
+  padding: 1.5rem;
 }
 
-.work-experience h2 {
-  margin-bottom: 1rem;
+.work-experience h2,
+.education h2 {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
-.work-experience p {
+.work-experience p,
+.education p {
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -116,7 +154,7 @@ img {
 
 /* Carousel Styles */
 .carousel-container {
-  margin: 3rem 0;
+  margin: 2rem;
   text-align: center;
 }
 
@@ -136,11 +174,12 @@ img {
   /* Hides scrollbar in Chrome, Edge, and Safari */
 }
 
-
 .carousel-item {
   flex: 0 0 auto;
   scroll-snap-align: start;
   width: 300px;
+  height: 300px;
+  background-color: #f9f9f9;
   border-radius: 15px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -153,7 +192,7 @@ img {
 }
 
 .carousel-item p {
-  margin-top: 0.0rem;
+  margin-top: 1.2rem;
   font-size: 0.9rem;
 }
 
@@ -167,25 +206,108 @@ img {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.mission-statement h2 {
+.mission-statement p {
+  font-size: 1.2rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 2rem 0;
+  max-width: 100%;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-areas:
+    "proj1 proj2"
+    "proj3 proj4";
+  grid-template-columns: 1fr 1fr;
+  /* Each column is of equal width */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  gap: 2rem;
+  /* Adds spacing between quadrants */
+}
+
+.project-box {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.project-box h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.project-box p {
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.5;
   margin-bottom: 1rem;
 }
 
-.mission-statement p {
-  font-size: 1.2rem;
+.project-box img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
 }
 
-/* Projects Section Styles */
-.projects {
-  margin: 3rem 0;
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 2rem;
   text-align: center;
 }
 
-.projects h2 {
-  margin-bottom: 1rem;
+.footer a {
+  color: #007bff;
+  /* Electric blue */
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1rem;
 }
 
-.projects p {
-  font-size: 1rem;
-  color: grey;
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .about-container {
+    grid-template-areas:
+      "top-left"
+      "bottom-left"
+      "bottom-right";
+    grid-template-columns: 1fr;
+    /* Single column layout for small screens */
+  }
+
+  .projects-container {
+    grid-template-areas:
+      "proj1"
+      "proj2"
+      "proj3"
+      "proj4";
+    grid-template-columns: 1fr;
+    /* Single column layout for small screens */
+  }
 }
